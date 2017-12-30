@@ -12,6 +12,7 @@ var app=express();
 var server=http.createServer(app);
 var io=require('socket.io')(server);
 
+var port=process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
@@ -25,6 +26,6 @@ io.on('connection',(socket)=>{
   })
 });
 
-server.listen(3000,()=>{
+server.listen(port,()=>{
   console.log('app is listeinig on port 3000');
 })
