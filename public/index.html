@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chat application</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket=io();
+
+socket.emit('something',{data:'something from the client side to server side '});
+      socket.on('mypen',(data)=>{
+    console.log(data);
+document.getElementById('id').innerHTML=data.data;
+  });
+    </script>
+  </head>
+  <body>
+    <p>welcome to chat application</p>
+    <p id='id'></p>
+  </body>
+</html>
