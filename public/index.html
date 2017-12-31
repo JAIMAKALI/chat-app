@@ -5,18 +5,19 @@
     <title>chat application</title>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket=io();
 
-socket.emit('something',{data:'something from the client side to server side '});
-      socket.on('mypen',(data)=>{
-    console.log(data);
-document.getElementById('id').innerHTML=data.data;
-  });
-    </script>
   </head>
   <body>
     <p>welcome to chat application</p>
     <p id='id'></p>
+
+<input name='message2' id='message2' type='text' placeholder='message u want to send' value=''/>
+<ol id='myList'>
+<li>something</li>
+</ol>
+<button id='button' onclick="message()">send</button>
+
+
+<script src="/index.js"></script>
   </body>
 </html>
