@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>chat application</title>
-
+ <link rel="stylesheet" href="./css/style.css">
     <script src="/socket.io/socket.io.js"></script>
 
   </head>
@@ -11,13 +11,27 @@
     <p>welcome to chat application</p>
     <p id='id'></p>
 
+
+
+
+
+
+      <div class="container">
+      <ul id='myList'>
+        <li>something</li>
+<span class="time-right"><p id='time'></p></span>
+</ul>
+      </div>
+
+<div id='footer'>
+<form id="form" onsubmit='handle(event)'>
 <input name='message2' id='message2' type='text' placeholder='message u want to send' value=''/>
-<ol id='myList'>
-<li>something</li>
-</ol>
-<button id='button' onclick="message()">send</button>
+<input type='button' id='button'  value='send' onclick='message()'  >
+<input type='button' id='button1' onclick="sendLocation()" value='location'>
+</form>
 
+</div>
 
-<script src="/index.js"></script>
+<script src="/index.js" type='text/javascript'></script>
   </body>
 </html>
